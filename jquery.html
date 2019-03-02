@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  <script>
+	$(document).ready(function(){
+
+	
+	
+	$("#hide").click(function(){
+        $("p").hide(2000);
+    });
+    $("#show").click(function(){
+        $("p").show(2000);
+    });
+	$("#increase").click(function(){
+  var currentSize = $("p").css("font-size");
+  var currentSize = parseFloat(currentSize)*1.2;
+  $("p").css("font-size", currentSize);
+
+  return false;
+  });
+  $("#decrease").click(function(){
+  var currentSize = $("p").css("font-size");
+  var currentSize = parseFloat(currentSize)*0.8;
+  $("p").css("font-size", currentSize);
+
+  return false;
+  });
+  $("#fade").click(function(){
+    $("#div1").fadeToggle();
+    $("#div2").fadeToggle("slow");
+    $("#div3").fadeToggle("slower");
+  });
+  $("#reset").click(function(){
+    $("p").css("color", "black");
+  });
+  $("p").mouseover(function(){
+    $("p").css("color", "red");
+  });
+
+});
+
+</script> 
+</head>
+<body>
+
+<button id="increase">Font +</button>
+<button id="decrease">Font -</button>
+<button id="hide">Hide</button>
+<button id="show">Show</button>
+<button id="fade">Fade In/Out</button>
+<button id="reset">Reset</button>
+
+<h1>Harjot Singh Khangura</h1>
+<h1>Student id - c0730338</h1>
+<p>Course - Computer programmer</p>
+<p>Subject - Emerging Technologies</p>
+<p>My hobbies are listening music and playing football.</p>
+If we move mouse cursor over the text, the text color changes to red. Please click on Reset button to change font color to black.
+
+<div id="div1" style="width:80px;height:80px;background-color:red;"></div>
+<br>
+<div id="div2" style="width:80px;height:80px;background-color:green;"></div>
+<br>
+<div id="div3" style="width:80px;height:80px;background-color:blue;"></div>
+
+</body>
+</html>
